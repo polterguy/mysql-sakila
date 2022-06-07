@@ -6,7 +6,7 @@ if
    .lambda
 
       // File doesn't exists, hence moving it.
-      io.file.move:/modules/mysql-sagila/magic.startup/sagila.sql
+      io.file.move:/modules/mysql-sagila/magic.startup/sakila.sql
          .:/etc/mysql/templates/
       log.info:Sagila database SQL script moved into etc folder
          filename:/etc/mysql/templates/sagila.sql
