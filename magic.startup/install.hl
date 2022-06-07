@@ -1,0 +1,12 @@
+
+// Moves the sagila.sql file into template folder for PostgreSQL.
+if
+   not
+      io.file.exists:/etc/mysql/templates/sagila.sql
+   .lambda
+
+      // File doesn't exists, hence moving it.
+      io.file.move:/modules/mysql-sagila/magic.startup/sagila.sql
+         .:/etc/mysql/templates/
+      log.info:Sagila database SQL script moved into etc folder
+         filename:/etc/mysql/templates/sagila.sql
